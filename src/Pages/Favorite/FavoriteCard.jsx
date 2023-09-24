@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 // eslint-disable-next-line react/prop-types
 const FavoriteCard = ({phone}) => {
-    console.log(phone)
 
     const { image, phone_name, brand_name, price, } = phone || {};
 
@@ -26,19 +25,8 @@ const FavoriteCard = ({phone}) => {
                         {price}
                     </p>
                     <div className='space-x-3'>
-                        <Link className="inline-block" href="#">
-                            <button  className="flex btn btn-secondary" type="button">
-                                Add To Favorite
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" aria-hidden="true" className="h-4 w-4" >
-                                    <path
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                        d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
-                                    ></path>
-                                </svg>
-                            </button>
-                        </Link>
-                        <Link to="/" className='btn btn-secondary'>Back Home</Link>
+                        <Link to="/" className='btn btn-secondary'>Back</Link>
+                        <button className="btn btn-primary">Remove</button>
                     </div>
                 </div>
             </div>
